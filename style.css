@@ -103,6 +103,74 @@ a:hover {
 .social-icon:hover {
     color: #0056b3;
 }
+.categories {
+    padding: 40px 20px; /* Отступы сверху/снизу и слева/справа */
+    text-align: center; /* Выравнивание текста по центру */
+    background: radial-gradient(circle, rgba(25,14,79,0.5) 10%, #000000 100%); /* Радиационный градиент для фона */
+}
+
+.categories h2 {
+    font-size: 32px; /* Размер шрифта для заголовка */
+    color: azure; /* Цвет заголовка */
+    margin-bottom: 20px; /* Отступ снизу у заголовка */
+}
+
+.category-grid {
+    display: flex; /* Использование flexbox для размещения элементов */
+    gap: 20px; /* Промежуток между элементами */
+    justify-content: center; /* Выравнивание элементов по центру */
+    flex-wrap: wrap; /* Элементы оборачиваются на новую строку, если не помещаются */
+}
+
+.category-card {
+    position: relative; /* Для позиционирования накладывающихся элементов */
+    width: 300px; /* Ширина карточки */
+    height: 200px; /* Высота карточки */
+    border-radius: 10px; /* Закругленные углы карточки */
+    overflow: hidden; /* Прячем часть содержимого, выходящего за пределы карточки */
+    text-decoration: none; /* Убирает подчеркивание с ссылок */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень вокруг карточки */
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавный переход для трансформации и тени */
+}
+
+.category-card:hover {
+    transform: translateY(-10px); /* Поднимает карточку вверх при наведении */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Увеличивает тень при наведении */
+}
+
+.category-card img {
+    width: 100%; /* Изображение растягивается по ширине карточки */
+    height: 100%; /* Изображение растягивается по высоте карточки */
+    object-fit: cover; /* Обрезает изображение, сохраняя пропорции */
+}
+
+.category-overlay {
+    position: absolute; /* Позиционирование относительно карточки */
+    top: 0; /* Прикрепляет к верхнему краю карточки */
+    left: 0; /* Прикрепляет к левому краю карточки */
+    width: 100%; /* Занимает всю ширину карточки */
+    height: 100%; /* Занимает всю высоту карточки */
+    background: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон */
+    display: flex; /* Использует flexbox для размещения элементов внутри */
+    flex-direction: column; /* Элементы расположены в колонку */
+    justify-content: center; /* Центрирует элементы по вертикали */
+    align-items: center; /* Центрирует элементы по горизонтали */
+    text-align: center; /* Выравнивание текста по центру */
+    color: azure; /* Цвет текста */
+    padding: 10px; /* Отступы внутри оверлея */
+    transition: background 0.3s; /* Плавный переход для изменения фона */
+}
+
+.category-card:hover .category-overlay {
+    background: rgba(0, 0, 0, 0.7); /* Темнее фон оверлея при наведении */
+}
+
+.category-overlay h3 {
+    font-size: 24px; /* Размер шрифта заголовка в оверлее */
+    margin-bottom: 10px; /* Отступ снизу у заголовка */
+    color: azure; /* Цвет заголовка */
+}
+
 .container {
     width: 100%; 
     height: auto;
